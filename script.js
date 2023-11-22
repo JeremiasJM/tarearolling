@@ -1,17 +1,14 @@
 /* Hola */
 
 
-let carritoDeCompras = ["manzana", "pera", "anana", "frutilla","palta"];
-console.log(carritoDeCompras);
+let carritoCompras = ["manzana", "pera", "anana", "frutilla","palta"];
 
 
 
-function listarCarrito(){
-console.log("Productos en el carrito: ");
-for(let i= 0; i<carritoDeCompras.length;i++){
-    console.log(carritoDeCompras);
+function listarProductos(){
+    console.log("Productos en el carrito:");
+    for(let i = 0; i < carritoCompras.length; i++) {
+        console.log(i, "-", carritoCompras[i]);
+    }
 }
-
-}
-
-listarCarrito();
+    listarProductos();
