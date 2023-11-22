@@ -25,3 +25,13 @@ agregarProducto("uva");
 console.log("Agregamos Uva", carritoCompras)
 
 
+/* Funcion listar carrito */
+function listarCarrito(){
+    console.log("Productos en el carrito: ");
+    for(let i= 0; i<carritoDeCompras.length;i++){
+        console.log(i, "-", carritoDeCompras[i]);
+    }
+    
+    }
+    
+listarCarrito();
