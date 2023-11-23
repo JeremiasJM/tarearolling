@@ -14,7 +14,9 @@
 /* crea un arrar de compras */
 
 let carritoCompras = ["manzana","pera","anana","frutilla"];
-console.log(carritoCompras)
+
+console.log(carritoCompras);
+
 /* Agregar producto al carrito con funciones */
 
 function agregarProducto(producto){
@@ -24,6 +26,17 @@ function agregarProducto(producto){
 agregarProducto("uva"); 
 console.log("Agregamos Uva", carritoCompras)
 
-//Eliminar producto del carrito
+
 delete carritoCompras [0]
 console.log(carritoCompras)
+
+
+/* Funcion listar carrito */
+function listarProductos(){
+    console.log("Productos en el carrito:");
+    for(let i = 0; i < carritoCompras.length; i++) {
+        console.log(i, "-", carritoCompras[i]);
+    }
+}
+    listarProductos();
+
