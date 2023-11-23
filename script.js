@@ -27,6 +27,7 @@ agregarProducto("uva");
 console.log("Agregamos Uva", carritoCompras)
 
 
+
 delete carritoCompras [0]
 console.log(carritoCompras)
 
@@ -44,8 +45,23 @@ function listarProductos(){
 let nombreABuscar = 'uva';
 let indice = carritoCompras.indexOf(nombreABuscar);
 
+
 if (indice !== -1) {
   console.log('El producto encontrado es:', nombreABuscar);
 } else {
   console.log('No encontrado', nombreABuscar);
 }
+
+
+const filtrarProductos = (palabraClave) => {
+    const resultado = carritoCompras.filter(producto =>
+      producto.includes(palabraClave.toLowerCase())
+    );
+    return resultado;
+  };
+  
+ 
+  const resultadoFiltrado = filtrarProductos("man");
+  console.log("El producto filtrado es:", resultadoFiltrado);
+
+
