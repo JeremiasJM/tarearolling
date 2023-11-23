@@ -14,7 +14,9 @@
 /* crea un arrar de compras */
 
 let carritoCompras = ["manzana","pera","anana","frutilla"];
+
 console.log(carritoCompras);
+
 /* Agregar producto al carrito con funciones */
 
 function agregarProducto(producto){
@@ -24,6 +26,22 @@ function agregarProducto(producto){
 agregarProducto("uva"); 
 console.log("Agregamos Uva", carritoCompras)
 
+
+
+delete carritoCompras [0]
+console.log(carritoCompras)
+
+
+/* Funcion listar carrito */
+function listarProductos(){
+    console.log("Productos en el carrito:");
+    for(let i = 0; i < carritoCompras.length; i++) {
+        console.log(i, "-", carritoCompras[i]);
+    }
+}
+    listarProductos();
+
+
 const filtrarProductos = (palabraClave) => {
     const resultado = carritoCompras.filter(producto =>
       producto.includes(palabraClave.toLowerCase())
@@ -31,6 +49,7 @@ const filtrarProductos = (palabraClave) => {
     return resultado;
   };
   
-  // Ejemplo de uso: Filtrar productos que contengan la palabra "oficina"
+ 
   const resultadoFiltrado = filtrarProductos("man");
   console.log("El producto filtrado es:", resultadoFiltrado);
+
