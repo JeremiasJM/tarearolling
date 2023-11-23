@@ -38,8 +38,19 @@ function listarProductos(){
     for(let i = 0; i < carritoCompras.length; i++) {
         console.log(i, "-", carritoCompras[i]);
     }
+}listarProductos();
+
+//Buscar un producto en el carrito 
+
+let nombreABuscar = 'uva';
+let indice = carritoCompras.indexOf(nombreABuscar);
+
+
+if (indice !== -1) {
+  console.log('El producto encontrado es:', nombreABuscar);
+} else {
+  console.log('No encontrado', nombreABuscar);
 }
-    listarProductos();
 
 
 const filtrarProductos = (palabraClave) => {
@@ -52,4 +63,5 @@ const filtrarProductos = (palabraClave) => {
  
   const resultadoFiltrado = filtrarProductos("man");
   console.log("El producto filtrado es:", resultadoFiltrado);
+
 
