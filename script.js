@@ -37,6 +37,15 @@ function listarProductos(){
     for(let i = 0; i < carritoCompras.length; i++) {
         console.log(i, "-", carritoCompras[i]);
     }
-}
-    listarProductos();
+}listarProductos();
 
+//Buscar un producto en el carrito 
+
+let nombreABuscar = 'uva';
+let indice = carritoCompras.indexOf(nombreABuscar);
+
+if (indice !== -1) {
+  console.log('El producto encontrado es:', nombreABuscar);
+} else {
+  console.log('No encontrado', nombreABuscar);
+}
