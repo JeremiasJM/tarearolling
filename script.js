@@ -24,4 +24,13 @@ function agregarProducto(producto){
 agregarProducto("uva"); 
 console.log("Agregamos Uva", carritoCompras)
 
-
+const filtrarProductos = (palabraClave) => {
+    const resultado = carritoCompras.filter(producto =>
+      producto.includes(palabraClave.toLowerCase())
+    );
+    return resultado;
+  };
+  
+  // Ejemplo de uso: Filtrar productos que contengan la palabra "oficina"
+  const resultadoFiltrado = filtrarProductos("man");
+  console.log("El producto filtrado es:", resultadoFiltrado);
